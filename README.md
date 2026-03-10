@@ -68,6 +68,62 @@ This exercise demonstrates practical applications of MCP in professional consult
 
 ---
 
+## Lab 4: Capability Management — Updates & QE Guidance
+
+This repository includes an updated plan for Lab 4 which focuses on implementing a capability management exercise with an emphasis on lightweight Quality Engineering (QE) activities.
+
+- **Exercise goal:** Implement and extend a Capability Management system, research similar external repos, identify feature gaps, and create GitHub issues (via GitHub MCP) describing those gaps with clear acceptance criteria.
+- **QE focus:** Add lightweight unit/integration/E2E tests that validate REST APIs and key flows. The lab keeps testing requirements intentionally minimal so participants can focus on the workflow and tools.
+- **Recommended approach for the workshop:** We pre-configure a minimal `pytest` scaffold and a single failing placeholder test to prompt participants to add and pass integration tests as part of the exercise. This avoids version/configuration mismatches while still teaching how to add tests and update CI.
+
+Acceptance criteria for Lab 4 issues (suggested):
+- A short description of the gap and why it matters for capability management.
+- Clear acceptance criteria (what success looks like).
+- At least one integration test (or a `pytest` test file) that demonstrates the gap or verifies the requested behavior.
+
+Testing and pipeline guidance:
+- The repository contains a basic `pytest` scaffold under `tests/` and a GitHub Actions workflow that runs `pytest` on push/PRs. The workflow is intentionally simple to reduce friction.
+- Participants may either: (a) create an issue to add a testing framework and configuration, or (b) update the pre-configured tests to make them pass and add new integration tests for their issue.
+- For end-to-end browser tests, `Playwright` is an option (Python support exists), but it is not required for this lab and may be left as an optional extension.
+
+Role guidance:
+- **QE participants:** encouraged to add integration tests for REST APIs and lightweight E2E where relevant.
+- **SE/PE participants:** may focus on feature implementation and leave tests as minimal artifacts, but should still provide clear acceptance criteria in issues.
+
+Workflow experiment suggestion:
+- Try both approaches in different runs: (1) require participants to create an issue to add a framework; (2) provide a pre-configured failing test. Compare which approach is less disruptive and more educational.
+
+If you are running the lab locally, see the `tests/` folder and the CI workflow for examples and the placeholder failing test you should fix as part of the exercise.
+
+
+## Lab 4: Capability Management — Updates & QE Guidance
+
+This repository includes an updated plan for Lab 4 which focuses on implementing a capability management exercise with an emphasis on lightweight Quality Engineering (QE) activities.
+
+- **Exercise goal:** Implement and extend a Capability Management system, research similar external repos, identify feature gaps, and create GitHub issues (via GitHub MCP) describing those gaps with clear acceptance criteria.
+- **QE focus:** Add lightweight unit/integration/E2E tests that validate REST APIs and key flows. The lab keeps testing requirements intentionally minimal so participants can focus on the workflow and tools.
+- **Recommended approach for the workshop:** We pre-configure a minimal `pytest` scaffold and a single failing placeholder test to prompt participants to add and pass integration tests as part of the exercise. This avoids version/configuration mismatches while still teaching how to add tests and update CI.
+
+Acceptance criteria for Lab 4 issues (suggested):
+- A short description of the gap and why it matters for capability management.
+- Clear acceptance criteria (what success looks like).
+- At least one integration test (or a `pytest` test file) that demonstrates the gap or verifies the requested behavior.
+
+Testing and pipeline guidance:
+- The repository contains a basic `pytest` scaffold under `tests/` and a GitHub Actions workflow that runs `pytest` on push/PRs. The workflow is intentionally simple to reduce friction.
+- Participants may either: (a) create an issue to add a testing framework and configuration, or (b) update the pre-configured tests to make them pass and add new integration tests for their issue.
+- For end-to-end browser tests, `Playwright` is an option (Python support exists), but it is not required for this lab and may be left as an optional extension.
+
+Role guidance:
+- **QE participants:** encouraged to add integration tests for REST APIs and lightweight E2E where relevant.
+- **SE/PE participants:** may focus on feature implementation and leave tests as minimal artifacts, but should still provide clear acceptance criteria in issues.
+
+Workflow experiment suggestion:
+- Try both approaches in different runs: (1) require participants to create an issue to add a framework; (2) provide a pre-configured failing test. Compare which approach is less disruptive and more educational.
+
+If you are running the lab locally, see the `tests/` folder and the CI workflow for examples and the placeholder failing test you should fix as part of the exercise.
+
+
 **Part of the [AI Accelerated Engineering Bootcamp](https://github.com/colby-timm/copilot-bootcamp-overview)**
 
 ## License and Conduct
